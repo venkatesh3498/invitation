@@ -1,0 +1,276 @@
+*{
+    margin: 0%;
+}
+.first{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.first img{
+    width: 100%;
+    height: 100%;
+}
+.first .first_des{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 1%;
+    padding-top: 3%;
+    margin-left: 2%;
+    color: white;
+    text-align: center;
+   
+}
+.first .first_des img{
+    width: 80%;
+    height: 90%;
+    border-radius: 50%;
+    box-shadow: black 1px 1px 15px;
+}
+.first .first_text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    padding: 0%;
+}
+.date{
+    text-align: center;
+    color: white;
+    text-shadow: white;
+    background-color: rgb(0,37,51);
+    
+    padding: 1% 5% 2% 5%;
+    margin: 1% 3%;
+}
+.date h3{
+    padding-top: 1%;
+}
+.about{
+    background-color: rgb(0,37,51);
+    color: white;
+    margin: 1% 3%;
+    text-align: center;
+}
+.about .about_bride{
+    display: inline-block;
+    height: 50%;
+
+}
+.about .about_bride img{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    height: 100%;
+    margin: 1% 2%;
+
+}
+.about .about_bride .about_bride_des{
+    display: table-cell;
+    vertical-align: middle;
+    width: 45%;
+    height: 100%;
+    float: left;
+    margin: 1% 2%;
+    text-align: center;
+    word-spacing: 4px;
+}
+
+.about .about_groom{
+    display: inline-block;
+    height: 50%;
+}
+.about .about_groom .about_groom_des{
+    display: table-cell;
+    vertical-align: middle;
+    width: 45%;
+    height: 100%;
+    float: right;
+    margin: 1% 2%;
+}
+.about .about_groom img{
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2% 2% 3% 1%;
+    width: 48%;
+    height: 100%;
+}
+
+.gallery{
+    background-color: rgb(0,37,51);
+    margin: 1% 3%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.gallery img{
+    width: 17%;
+}
+.directions{
+    text-align: center;
+    color: white;
+    background-color: rgb(0,37,51);
+    margin: 1% 3%;
+}
+.footer{
+    text-align: center;
+    color: white;
+    text-shadow: white;
+    background-color: rgb(0,37,51);
+    padding: 1% 10% 1% 10%;
+}
+@media screen and (max-width:450px) {
+    .about .about_bride img,.about .about_groom img,.about .about_groom .about_groom_des,.about .about_bride .about_bride_des{
+        width: 100%;
+        margin: 0%;
+    }
+    .about_bride,.about_groom{
+        display: grid;
+        width: 100%;
+        margin-bottom: 1%;
+    }
+    .about .about_groom .about_groom_des,.about .about_bride .about_bride_des{
+        margin-bottom: 2%;
+    }
+    .first .first_text{
+        font-size: 56%;
+    }
+    .date,.about{
+        font-size: 45%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .footer{
+        font-size: 45%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .gallery h1{
+        font-size: 95%;
+        padding: 1.5% 0%;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+    .directions .directions_des{
+        font-size: 56%;
+    }
+}
+
+
+
+/* hearts falling effecr */
+
+#hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.heart-container {
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    animation-duration: 8s;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    animation-name: fall;
+    animation-timing-function: linear;
+    z-index: 999;
+}
+
+
+
+@keyframes fall {
+    from {
+        top: -20px;
+    }
+
+    to {
+        top: 100%;
+    }
+}
+
+@keyframes fall {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 100%;
+    }
+}
+
+.heart {
+    overflow: hidden;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    animation-duration: 0.5s;
+    animation-name: swing;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    direction: alternate;
+    transform-origin: center center;
+    animation-duration: 1s;
+    animation-name: swing;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform-origin: center center;
+    z-index: 999;
+}
+@keyframes swing {
+    from {
+       transform: rotate(-45deg) translateX(10px);
+    }
+
+    to {
+        transform: rotate(45deg) translateX(-10px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: scaleX(1) translateX(5px);
+    }
+
+    50% {
+        transform: scaleX(0.1);
+    }
+
+    to {
+        transform: scaleX(1) translateX(-5px);
+    }
+}
+
+@keyframes swing {
+    from {
+        transform: rotate(-45deg) translateX(10px);
+    }
+
+    to {
+        transform: rotate(45deg) translateX(-10px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: scaleX(1) translateX(5px);
+    }
+
+    50% {
+        transform: scaleX(0.1);
+    }
+
+    to {
+        transform: scaleX(1) translateX(-5px);
+    }
+}
